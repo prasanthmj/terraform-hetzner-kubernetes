@@ -1,0 +1,6 @@
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
+.DS_Store
+kube_config_cluster.yml
+
