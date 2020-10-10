@@ -11,4 +11,5 @@ The recommended way is to use Packer.io to create image and create nodes using t
 ## Links
 * [Terraform language reference](https://www.terraform.io/docs/configuration/index.html)
 * [terraform-provider-rke examples](https://github.com/rancher/terraform-provider-rke/tree/master/examples)
+* [Setup Bastion host for SSH](https://smallstep.com/blog/diy-ssh-bastion-host/)
 

@@ -20,5 +20,11 @@ variable "hcloud_location" {
   default = "nbg1"
 }
 
+variable "deploy_user" {
+  type = object({
+    username = string
+    ssh_key_path= string
+  })
+}
 
 

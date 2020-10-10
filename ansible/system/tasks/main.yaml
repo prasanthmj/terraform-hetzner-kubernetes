@@ -1,0 +1,7 @@
+---
+- import_tasks: hostname.yaml
+
+- import_tasks: system.yaml
+
+
+    

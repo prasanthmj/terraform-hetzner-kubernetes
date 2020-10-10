@@ -5,9 +5,9 @@ resource "rke_cluster" "rcluster" {
     content{
       address  = nodes.value.ipv4_address
       internal_address = nodes.value.internal_ip
-      user    = "root"
+      user    = var.ssh_login.username
       role    = ["controlplane", "worker", "etcd"]
-      ssh_key = file(var.ssh_key_path)      
+      ssh_key = file(var.ssh_login.ssh_key_path)      
     }
   }
   

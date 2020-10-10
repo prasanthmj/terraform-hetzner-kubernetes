@@ -45,19 +45,20 @@ resource "hcloud_server" "cloud_nodes" {
     }
 
     plays {
-      enabled = var.ansible_playbook_path != "" ? true : false
+      enabled = var.ansible_settings.playbook_path != "" ? true : false
       
       verbose = true
       
       playbook {
-        file_path = var.ansible_playbook_path
+        file_path = var.ansible_settings.playbook_path
       }
 
       extra_vars = {
         cluster_name = var.cluster_name
         server_name  = each.value.name
         ansible_user = "root"
-        
+        deploy_user_name = var.ansible_settings.deploy_username
+        deploy_user_key = file("${var.ansible_settings.deploy_user_key_path}.pub")
       }
 
     }

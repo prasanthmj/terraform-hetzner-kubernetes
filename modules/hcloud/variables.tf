@@ -35,11 +35,15 @@ variable "private_network_zone" {
   default = "eu-central"
 }
 
-variable "ansible_playbook_path" {
-  type = string
-  default = ""
+variable "ansible_settings" {
+  type = object({
+    playbook_path = string
+    deploy_username = string
+    deploy_user_key_path= string
+  })
+  default = {
+    playbook_path=""
+    deploy_username=""
+    deploy_user_key_path=""
+  }
 }
-
-
-
-

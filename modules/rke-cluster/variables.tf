@@ -7,7 +7,9 @@ variable "nodes" {
 }
 
 
-# Required configuration
-variable "ssh_key_path" {
-    type=string
+variable "ssh_login" {
+  type = object({
+    username = string
+    ssh_key_path= string
+  })
 }

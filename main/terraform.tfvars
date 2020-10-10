@@ -27,5 +27,13 @@ ssh_key_path = "~/.ssh/hetzner1"
 
 hcloud_location = "nbg1"
 
+deploy_user = {
+    username = "root"
+    ssh_key_path = "~/.ssh/hetzner1"
+}
+
+
+
+
 
 
